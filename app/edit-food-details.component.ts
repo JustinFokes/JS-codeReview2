@@ -4,9 +4,9 @@ import {Food} from './Food.model';
 @Component({
   selector: 'edit-food-details',
   inputs: ['food'],
+
   template: `
-  <div id="edit-food">
-	  <h5>Edit Food Details:</h5>
+  <div id="edit-food" >
 	  <input [(ngModel)]="food.name" class="col-sm-8 input-sm"/>
 	  <input [(ngModel)]="food.notes" class="col-sm-8 input-sm"/>
 	  <input [(ngModel)]="food.calories" class="col-sm-8 input-sm"/>
@@ -16,3 +16,6 @@ import {Food} from './Food.model';
 export class EditFoodDetailsComponent {
   public food: Food;
 }
+
+
+//I want this!!! Inside FoodDisplay...

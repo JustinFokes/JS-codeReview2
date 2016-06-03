@@ -25,7 +25,7 @@ import { EditFoodDetailsComponent } from './edit-food-details.component';
     [class.selected]="currentFood === selectedFood"
     [food]="currentFood">
     </food-display>
-    <edit-food-details *ngIf="selectedFood" [food]="selectedFood"></edit-food-details>
+    <edit-food-details *ngIf="selectedFood" [food]="selectedFood"></edit-food-details>  
     <br>
     <div id="new-food">
       <new-food (onSubmitNewFood)="addFood($event)"></new-food>

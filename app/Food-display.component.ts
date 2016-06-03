@@ -4,13 +4,11 @@ import { Food } from './Food.model';
 @Component ({
   selector: 'food-display',
   inputs: ['food'],
-  template: `
-  
+  template: `  
   <div class="food-form"> 
     <h5 (click) = "toggleShow()">{{ food.name }}</h5>
-    <p *ngIf="show === true">Notes: {{ food.notes }} --- Calories: {{ food.calories }}</p>
+    <p *ngIf="show === true">Notes: {{ food.notes }} --- Calories: {{ food.calories }}</p> 
   </div>  
-
   `
 })
 export class FoodDisplayComponent {
