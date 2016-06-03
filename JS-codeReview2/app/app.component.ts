@@ -13,10 +13,8 @@ import { FoodListComponent } from './Food-list.component';
   <div id="heading">
     <h1>Food Log</h1>
     <h3>(Click the Food Item to Display Calories and Notes)</h3>
-    <div>
     <food-list (onFoodSelect)="receiveFood($event)" [foodList] = "foods"></food-list>
-    </div>
-
+  </div>
   `
 })
 
