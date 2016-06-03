@@ -2,6 +2,7 @@ import { Component, EventEmitter } from 'angular2/core';
 import { Food } from './Food.model';
 import { NewFoodComponent } from './new-Food.component';
 import { FoodDisplayComponent } from './Food-display.component';
+import { TypePipe } from './type.pipe';
 
 
 
@@ -9,10 +10,16 @@ import { FoodDisplayComponent } from './Food-display.component';
   selector: 'food-list',
   inputs: ['foodList'],
   outputs: ['onFoodSelect'],
+  pipes: [TypePipe],
   directives: [NewFoodComponent, FoodDisplayComponent],
   template: `
 
-    <food-display *ngFor="#currentFood of foodList"
+    <select (change)="onChange($event.target.value)" class="filter">
+      <option value="Healthy">Foods less than 500Kcal</option>
+      <option value="Unhealthy">Foods with MORE than 500Kcal</option>
+    </select>
+
+    <food-display *ngFor="#currentFood of foodList | foodFilter: filterFood"
       (click)="foodClicked(currentFood)"
       [class.selected]="currentFood === selectedFood"
       [food]="currentFood">
@@ -24,6 +31,7 @@ export class FoodListComponent {
   public foodList : Food[];
   public onFoodSelect : EventEmitter<Food>;
   public selectedFood : Food;
+  public filterFood: string = "Healthy";
   constructor() {
     this.onFoodSelect = new EventEmitter();
   }
@@ -34,5 +42,8 @@ export class FoodListComponent {
   addFood(newFood : Food): void {
     this.foodList.push(newFood);
     console.log(newFood);
+  }
+  onChange(filterOption) {
+    this.filterFood = filterOption;
   }
 }
