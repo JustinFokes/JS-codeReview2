@@ -6,11 +6,9 @@ import { Food } from './Food.model';
   inputs: ['food'],
   template: `
   
-  <div> 
-
+  <div class="food-form"> 
     <h5 (click) = "toggleShow()">{{ food.name }}</h5>
-      <p *ngIf="show === true">Notes: {{ food.notes }} --- Calories: {{ food.calories }}</p>
-  
+    <p *ngIf="show === true">Notes: {{ food.notes }} --- Calories: {{ food.calories }}</p>
   </div>  
 
   `
