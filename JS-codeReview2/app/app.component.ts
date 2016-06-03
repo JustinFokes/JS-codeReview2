@@ -1,15 +1,18 @@
 import { Component } from 'angular2/core';
 import { Food } from './Food.model';
+import { FoodListComponent } from './Food-list.component';
+
 
 
 
 @Component ({
   selector: 'my-app',
-  directives: [],
+  directives: [FoodListComponent],
   template: `
 
   <div id="heading">
     <h1>Food Log</h1>
+    <food-list (onFoodSelect)="receiveFood($event)" [foodList] = "foods"></food-list>
   </div>
 
   `
@@ -22,6 +25,9 @@ export class AppComponent {
       new Food("Pizza", "Definitely caved on this one!", 5000),
       new Food("Chicken", "Great meal, and low on carbs too!", 250),
     ];
+  }
+  receiveFood(newFood: Food): void {
+  console.log(newFood);
   }
 }
 
