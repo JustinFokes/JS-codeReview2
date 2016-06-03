@@ -1,0 +1,15 @@
+#heading{
+	padding-left: 3%;
+	width: 100%;
+	height: 100%;
+}
+.food-form{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#edit-food{
+	padding: 2%;
+}
+#new-food{
+	padding: 4%;
+}
