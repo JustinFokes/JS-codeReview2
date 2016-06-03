@@ -5,10 +5,14 @@ import { Food } from './Food.model';
   selector: 'food-display',
   inputs: ['food'],
   template: `
-   
-    <label (click) = "toggleShow()">{{ food.name }} {{ food.notes }}</label>
-      <p *ngIf="show === true">{{ food.calories }}</p>
-    
+  
+  <div> 
+
+    <h5 (click) = "toggleShow()">{{ food.name }}</h5>
+      <p *ngIf="show === true">Notes: {{ food.notes }} --- Calories: {{ food.calories }}</p>
+  
+  </div>  
+
   `
 })
 export class FoodDisplayComponent {

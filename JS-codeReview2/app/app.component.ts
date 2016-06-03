@@ -12,8 +12,10 @@ import { FoodListComponent } from './Food-list.component';
 
   <div id="heading">
     <h1>Food Log</h1>
+    <h3>(Click the Food Item to Display Calories and Notes)</h3>
+    <div>
     <food-list (onFoodSelect)="receiveFood($event)" [foodList] = "foods"></food-list>
-  </div>
+    </div>
 
   `
 })
@@ -22,12 +24,11 @@ export class AppComponent {
   public foods: Food[];
   constructor() {
     this.foods = [
-      new Food("Pizza", "Definitely caved on this one!", 5000),
-      new Food("Chicken", "Great meal, and low on carbs too!", 250),
+      new Food("Pizza", "Definitely caved on this one", 5000),
+      new Food("Chicken", "Great meal, and low on carbs too", 250),
     ];
   }
   receiveFood(newFood: Food): void {
-  console.log(newFood);
   }
 }
 
