@@ -1,0 +1,19 @@
+{
+  "name": "angular2-skeleton-app",
+  "description": "",
+  "main": "",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "package": "^0.1.2"
+  }
+}
