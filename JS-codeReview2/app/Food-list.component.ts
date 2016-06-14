@@ -21,7 +21,6 @@ import { EditFoodDetailsComponent } from './edit-food-details.component';
     </select>
 
     <food-display *ngFor="#currentFood of foodList | foodFilter: filterFood"
-<<<<<<< HEAD
       (click)="foodClicked(currentFood)"
       [class.selected]="currentFood === selectedFood"
       [food]="currentFood">
@@ -30,15 +29,6 @@ import { EditFoodDetailsComponent } from './edit-food-details.component';
       <edit-food-details *ngIf="selectedFood" [food]="selectedFood"></edit-food-details>
     </div>
     <div id="submit-food">
-=======
-    (click)="foodClicked(currentFood)"
-    [class.selected]="currentFood === selectedFood"
-    [food]="currentFood">
-    </food-display>
-    <edit-food-details *ngIf="selectedFood" [food]="selectedFood"></edit-food-details>  
-    <br>
-    <div id="new-food">
->>>>>>> 5c6ab9f05736eb5bce7f0d40be9bc1f86ad59f9c
       <new-food (onSubmitNewFood)="addFood($event)"></new-food>
     </div>
   `

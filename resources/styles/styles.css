@@ -1,10 +1,24 @@
 #heading{
+<<<<<<< HEAD
 	padding: 2%;
+=======
+	padding-left: 3%;
+	width: 100%;
+	height: 100%;
+>>>>>>> 5c6ab9f05736eb5bce7f0d40be9bc1f86ad59f9c
 }
 .food-form{
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
+<<<<<<< HEAD
 #new-food-form{
 	padding: 20px;
+=======
+#edit-food{
+	padding: 2%;
+}
+#new-food{
+	padding: 4%;
+>>>>>>> 5c6ab9f05736eb5bce7f0d40be9bc1f86ad59f9c
 }
